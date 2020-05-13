@@ -1,0 +1,15 @@
+# docker-compose for testing build locally
+version: '3.7'
+
+services:
+    lucee:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: '${CONTAINER_PREFIX}_lucee'
+        ports:
+            - '${PORT}:8080'
+        volumes:
+            - ${SOURCE_DATA}:/var/lib/source_data
+            - ./s3-resources:/var/lib/s3_generated
+            - ./generatedData:/var/lib/generatedData

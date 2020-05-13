@@ -1,0 +1,27 @@
+# General Ignores + IDE
+.DS_Store
+settings.xml
+WEB-INF
+.env
+lucee_build.env
+
+# logs + tests
+logs/**
+tests/results/**
+
+# npm
+**/node_modules/*
+npm-debug.log
+yarn-error.log
+
+## Ignored Dependencies
+app/coldbox/*
+app/testbox/*
+app/modules/*
+**/apidocs/**
+
+## Ignore generated data
+generatedData*/*
+s3-resources/*
+debug.log
+env.json

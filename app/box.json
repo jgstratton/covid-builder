@@ -1,0 +1,29 @@
+{
+    "name":"Covid Stats Static Site Generator",
+    "version":"1.0.0",
+    "author":"jgs.stratton@gmail.com",
+    "slug":"covid-stats-generator",
+    "createPackageDirectory":false,
+    "type":"mvc",
+    "keywords":"",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"",
+        "url":""
+    },
+    "bugs":"",
+    "shortDescription":"",
+    "contributors":[],
+    "ignore":[],
+    "installPaths":{
+        "coldbox":"coldbox/"
+    },
+    "dependencies":{
+        "coldbox":"^5.0.0"
+    },
+    "scripts":{
+        "postVersion":"package set location='https://github.com/coldbox-templates/supersimple/archive/v`package version`.zip'",
+        "postPublish":"!git push --follow-tags"
+    }
+}
