@@ -6,7 +6,11 @@ pipeline {
 
 		stage("build") {
 			steps {
-				echo 'building the application'
+				echo 'Building the docker image'
+				docker.withRegistry('https://${env.docker-repository-host}:${env.docker-repository-port}') {
+					def customImage = docker.build("covid-builder:${env.BUILD_ID}")
+					
+				}
 			}
 		}
 
